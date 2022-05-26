@@ -103,6 +103,27 @@ public class RequestHeaderServlet extends HttpServlet {
         System.out.println("request.getLocalAddr() = " + request.getLocalAddr());
         System.out.println("request.getLocalPort() = " + request.getLocalPort());
 
+        // 서버(Name, Port)
+        System.out.println("[Server 정보]");
+        System.out.println("request.getServerName() = " + request.getServerName());
+        System.out.println("request.getServerPort() = " + request.getServerPort());
+
+        // URI, URL 컨텍스트 경로, 서블릿 경로, 메소드
+        System.out.println("[URI, URL 정보]");
+        System.out.println("request.getRequestURI() = " + request.getRequestURI());
+        System.out.println("request.getRequestURL() = " + request.getRequestURL());
+        System.out.println("request.getContextPath() = " + request.getContextPath());
+        System.out.println("request.getServletPath() = " + request.getServletPath());
+
+        //세션 ID
+        System.out.println("[SESSION ID 정보]");
+        System.out.println("request.getRequestedSessionId() = " + request.getRequestedSessionId());
+        System.out.println("request.isRequestedSessionIdFromCookie() = " + request.isRequestedSessionIdFromCookie());
+        System.out.println("request.isRequestedSessionIdFromURL() = " + request.isRequestedSessionIdFromURL());
+        System.out.println("request.isRequestedSessionIdValid() = " + request.isRequestedSessionIdValid());
+
+
+
         System.out.println("--- 기타 조회 end ---");
         System.out.println();
     }

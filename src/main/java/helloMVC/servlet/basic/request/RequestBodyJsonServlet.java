@@ -16,6 +16,7 @@ import java.nio.charset.StandardCharsets;
 @WebServlet(name="requestBodyJsonServlet", urlPatterns = "/request-body-json")
 public class RequestBodyJsonServlet extends HttpServlet {
 
+    //잭슨 json to java , java to json
     private ObjectMapper objectMapper = new ObjectMapper();
 
     @Override
