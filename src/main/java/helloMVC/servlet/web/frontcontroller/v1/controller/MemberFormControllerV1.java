@@ -17,3 +17,4 @@ public class MemberFormControllerV1 implements ControllerV1 {
         dispatcher.forward(request, response);   // 서블릿에서 jsp를 호출할 수있음
     }
 }
+
