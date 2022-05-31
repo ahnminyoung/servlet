@@ -4,6 +4,7 @@ import helloMVC.servlet.web.frontcontroller.MyView;
 import helloMVC.servlet.web.frontcontroller.v2.controller.MemberFormControllerV2;
 import helloMVC.servlet.web.frontcontroller.v2.controller.MemberListControllerV2;
 import helloMVC.servlet.web.frontcontroller.v2.controller.MemberSaveControllerV2;
+import helloMVC.servlet.web.frontcontroller.v4.controller.ControllerV4;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,7 +31,6 @@ public class FrontControllerServletV2 extends HttpServlet {
         System.out.println("FrontControllerServletV2.service");
 
         String requestURI = request.getRequestURI();
-
         ControllerV2 controller = controllerMap.get(requestURI);
         if(controller == null){
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);

@@ -41,11 +41,12 @@ public class FrontControllerServletV3 extends HttpServlet {
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             return;
         }
+
 //        Map<String, String> paramMap = new HashMap<>();
 //        request.getParameterNames().asIterator()
 //                .forEachRemaining(paramName -> paramMap.put(paramName, request.getParameter(paramName)));
 //      위에 주석이 밑에로 바뀜 ctrl + alt + M
-        Map<String, String> paramMap = createParamMap(request);
+        Map<String, String> paramMap = createParamMap(request);  // paramMap을 다 꺼내야함
         ModelView mv = controller.process(paramMap);
 
         String viewName = mv.getViewName();//논리이름 new-form
