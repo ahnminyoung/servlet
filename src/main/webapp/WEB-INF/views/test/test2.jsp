@@ -25,23 +25,22 @@
 
     let userList = ["minyoung", "jubin", "hong"];
 
-    console.log(typeof user);
-    console.log(typeof userList);
-    console.log(Array.isArray(user));
-    console.log(Array.isArray(userList));
+    console.log(typeof user);   //Object
+    console.log(typeof userList);   // Object
+    console.log(Array.isArray(user));   // false
+    console.log(Array.isArray(userList));   //true
 
     // arr1.sort 배열 재정령 , 배열자체가 변경되니 주의
     let arr1 = [1, 5, 4, 2, 3];
     arr1.sort();
 
-    console.log(arr1);
+    console.log(arr1);  //[1, 2, 3, 4, 5]
 
     let arr2 = [24, 53, 13, 2, 6];
     arr2.sort((a, b) => {
         console.log(a, b);
         return a - b;
     });
-
     console.log(arr2);
 
     // 배열의 모든수 합치기
@@ -53,6 +52,7 @@
         //result = result +num;
         resultForEach += num;
     })
+    console.log("arr3.forEach = ", resultForEach);
 
     // arr.reduce();
 
@@ -95,10 +95,30 @@
     ]
 
     let memberListResult1 = memberList1.reduce((prev, cur) => {
-        return prev + cur.age;
-    });
+        return prev += cur.age;
+    }, 0);
 
     console.log(memberListResult1);
+
+    // 이름이 5자 이상인사람들만
+    let memberList2 = [
+        {name:"ahnminyoung", age : 30},
+        {name:"leejubin"   , age : 33},
+        {name:"hong",        age : 37},
+        {name:"wang",        age : 24},
+        {name:"ahn",         age : 16},
+        {name:"jang",        age : 18},
+        {name:"park",        age : 45}
+    ]
+
+    let memberListResult2 = memberList2.reduce((prev, cur) => {
+        if (cur.name.length > 3) {
+            prev.push(cur.name);
+        }
+        return prev;
+    }, []);
+
+    console.log(memberListResult2);
 
 </script>
 <body>

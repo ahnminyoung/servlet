@@ -85,4 +85,43 @@ public class TestController {
         System.out.println("진입했나요");
     }
 
+    /**
+     *  나머지 매개변수, 전개구문
+     */
+    @GetMapping("/test3")
+    public void test3() {
+        System.out.println("진입했나요");
+    }
+
+    /**
+     *  closure
+     */
+    @GetMapping("/closure")
+    public void closure() {
+
+    }
+
+    /**
+     *  setTimeout , setInterval
+     */
+    @GetMapping("/setTimeInterval")
+    public void setTimeInterval() {
+
+    }
+
+    /**
+     *  call, apply, bind
+     */
+    @GetMapping("/callApplyBind")
+    public void callApplyBind() {
+
+    }
+    /**
+     *  prototype
+     */
+    @GetMapping("/prototype")
+    public void prototype() {
+
+    }
+
 }
