@@ -123,5 +123,28 @@ public class TestController {
     public void prototype() {
 
     }
+    /**
+     *  prototype
+     */
+    @GetMapping("/class1")
+    public void class1() {
+
+    }
+
+    /**
+     *  promise
+     */
+    @GetMapping("/promise")
+    public void promise() {
+
+    }
+
+    /**
+     *  async await
+     */
+    @GetMapping("/asyncAwait")
+    public void asyncAwait() {
+
+    }
 
 }

@@ -27,6 +27,8 @@
         console.log(this.name);
     }
 
+
+
     showThisName();
     showThisName.call(mike); // mike가 함수의 this가 됨   // 함수를 호출하면서 call을 사용하고 this로 사용할 객체로 넘기면 해당함수가 주어진 객체의 메소드인거처럼 사용할 수 있습니다.
     showThisName.call(tom);
