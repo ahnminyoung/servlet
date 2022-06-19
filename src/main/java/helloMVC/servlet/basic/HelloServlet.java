@@ -19,10 +19,14 @@ public class HelloServlet extends HttpServlet { // servlet은 httpServlet이란�
 
         String username = request.getParameter("username");
         System.out.println("username = " + username);
+        String height = request.getParameter("height");
+        System.out.println("height = " + height);
+
 
         response.setContentType("text/plain");
         response.setCharacterEncoding("utf-8");
         response.getWriter().write("hello" + username);
+
 
 
     }
